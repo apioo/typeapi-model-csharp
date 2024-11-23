@@ -28,9 +28,6 @@ public class Operation
     [JsonPropertyName("stability")]
     public int? Stability { get; set; }
 
-    [JsonPropertyName("tags")]
-    public System.Collections.Generic.List<string>? Tags { get; set; }
-
     [JsonPropertyName("throws")]
     public System.Collections.Generic.List<Response>? Throws { get; set; }
 
