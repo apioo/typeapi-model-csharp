@@ -37,11 +37,11 @@ jobs:
         with:
           dotnet-version: '7.0.102'
       - name: Copy csproj
-        run: cp ./project.csproj ./src/TypeSchema.Model/TypeSchema.Model.csproj
+        run: cp ./project.csproj ./src/TypeAPI.Model/TypeAPI.Model.csproj
       - name: Set version
-        run: sed -i 's/0.1.0/${{ inputs.typehub_version }}/g' ./src/TypeSchema.Model/TypeSchema.Model.csproj
+        run: sed -i 's/0.1.0/${{ inputs.typehub_version }}/g' ./src/TypeAPI.Model/TypeAPI.Model.csproj
       - name: Create and push NuGet package
-        working-directory: ./src/TypeSchema.Model
+        working-directory: ./src/TypeAPI.Model
         run: |
           dotnet pack -c Release
           dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json --skip-duplicate
