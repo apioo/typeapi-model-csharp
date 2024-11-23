@@ -1,0 +1,12 @@
+{
+  "type": "model-csharp",
+  "require": {
+    "typehub/typeapi": {
+      "target": "./src/TypeAPI.Model",
+      "namespace": "TypeAPI.Model",
+      "mapping": {
+        "typeschema": "TypeSchema.Model"
+      }
+    }
+  }
+}
