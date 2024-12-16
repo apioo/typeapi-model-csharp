@@ -2,6 +2,9 @@ using System.Text.Json.Serialization;
 
 namespace TypeAPI.Model;
 
+/// <summary>
+/// Describes arguments of the operation
+/// </summary>
 public class Argument
 {
     [JsonPropertyName("contentType")]
